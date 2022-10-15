@@ -1,9 +1,9 @@
+
 import sys
 import mempuzzle
 from mpuzzle_const import *
 import drawing
 import pygame
-
 
 newgame = mempuzzle.Mpuzzle_state()
 render = drawing.Mpuzzle_render(newgame)
@@ -17,6 +17,9 @@ mousex, mousey = 0, 0
 anispeed = drawing.Mpuzzle_render.FPS // 15
 fightercat = drawing.Animation(anispeed)
 fightercat_pos_x, fightercat_pos_y = 500, 25
+#cat fighter spritesheet from
+#https://opengameart.org/content/cat-fighter-sprite-sheet
+#by dogchicken
 fightercat.load_ssheet("cat_ani_fighter.png", 64, 64, 3, 9)
 
 while True:
