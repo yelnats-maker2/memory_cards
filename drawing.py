@@ -112,6 +112,7 @@ class Mpuzzle_render:
         self.mainfont = pygame.font.Font(None, 32)
         self.losetext = self.mainfont.render("you lose! please quit!!", True, RED)
         self.wintext = self.mainfont.render("you win! you can quit now!!", True, GREEN)
+        
     def drawBoard(self):
         self.displaySurf.fill(BGCOLOR)
         for boxx in range(len(self.boxRects)):
