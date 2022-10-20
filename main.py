@@ -37,6 +37,10 @@ fightercat3 = drawing.Animation(anispeed)
 fightercat3.load_ssheet("cat_ani_fighter.png", 64, 64, 8, 12)
 fightercat3.setpos(200, 200)
 
+#animation for opening screen
+fightercat4 = drawing.Animation(anispeed)
+fightercat4.load_ssheet("cat_ani_fighter.png", 64, 64, 5, 6)
+fightercat4.setpos(200, 200)
 
 mousex, mousey = 0, 0
 while newgame.state == newgame.MODE_START:
@@ -44,6 +48,8 @@ while newgame.state == newgame.MODE_START:
     render.tick()
     render.displaySurf.fill(NAVYBLUE)
     render.displaySurf.blit(starttext, (100, 10))
+    fightercat4.adv()
+    fightercat4.draw_ssheet(render.displaySurf)
     pygame.display.update()
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
